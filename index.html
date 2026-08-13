@@ -3,26 +3,47 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tinashe Tavekwa | Portfolio</title>
+<title>Tinashe Tavekwa | Software Developer Portfolio</title>
 
 <style>
+
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
 }
 
 body{
-    font-family:Arial, sans-serif;
-    line-height:1.6;
     background:#f4f6f9;
     color:#333;
 }
 
-.container{
-    width:90%;
-    max-width:1200px;
-    margin:auto;
+nav{
+    background:#0a192f;
+    padding:15px;
+    position:sticky;
+    top:0;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    justify-content:center;
+}
+
+nav ul li{
+    margin:0 20px;
+}
+
+nav ul li a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+nav ul li a:hover{
+    color:#00bcd4;
 }
 
 header{
@@ -33,39 +54,31 @@ header{
 }
 
 header h1{
-    font-size:3rem;
+    font-size:3.5rem;
 }
 
 header p{
-    margin-top:10px;
     font-size:1.2rem;
+    margin-top:15px;
 }
 
-.btn{
-    display:inline-block;
-    margin-top:20px;
-    padding:12px 25px;
-    background:#00bcd4;
-    color:white;
-    text-decoration:none;
-    border-radius:5px;
-}
-
-.btn:hover{
-    background:#0097a7;
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
 }
 
 section{
     padding:60px 0;
 }
 
-h2{
+.section-title{
     text-align:center;
-    margin-bottom:30px;
+    margin-bottom:40px;
     color:#0a192f;
 }
 
-#about p{
+.about{
     text-align:center;
     max-width:800px;
     margin:auto;
@@ -81,28 +94,48 @@ h2{
     background:white;
     padding:15px;
     text-align:center;
-    border-radius:5px;
+    border-radius:10px;
     box-shadow:0 2px 5px rgba(0,0,0,0.1);
     font-weight:bold;
 }
 
+.projects-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:20px;
+}
+
 .project-card{
     background:white;
-    padding:20px;
-    margin-bottom:20px;
-    border-left:6px solid #00bcd4;
-    box-shadow:0 2px 5px rgba(0,0,0,0.1);
+    padding:25px;
+    border-radius:10px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.1);
 }
 
 .project-card h3{
     color:#0a192f;
-    margin-bottom:10px;
+    margin-bottom:15px;
+}
+
+.project-btn{
+    display:inline-block;
+    margin-top:15px;
+    background:#00bcd4;
+    color:white;
+    text-decoration:none;
+    padding:10px 20px;
+    border-radius:5px;
+}
+
+.project-btn:hover{
+    background:#008fa1;
 }
 
 .education-card{
     background:white;
-    padding:20px;
+    padding:25px;
     text-align:center;
+    border-radius:10px;
     box-shadow:0 2px 5px rgba(0,0,0,0.1);
 }
 
@@ -120,166 +153,185 @@ footer{
     background:#05101d;
     color:white;
     text-align:center;
-    padding:15px;
+    padding:20px;
 }
+
 </style>
-
 </head>
-
 <body>
 
-<header>
-    <div class="container">
-        <h1>Tinashe Tavekwa</h1>
-        <p>Final-Year Information Technology Student | Software Developer</p>
+<nav>
+<ul>
+<li><a href="#about">About</a></lilsSkills</a></li>
+<li>#projectsProjects</a></li>
+<li>#contactContact</a></li>
+</ul>
+</nav>
 
-         My Projects</a>
-    </div>
+<header>
+
+<h1>Tinashe Tavekwa</h1>
+
+<p>
+Final-Year Information Technology Student | Software Developer
+</p>
+
 </header>
 
 <section id="about">
-    <div class="container">
-        <h2>About Me</h2>
 
-        <p>
-            I am a final-year Bachelor of Information Technology student
-            at Richfield Graduate Institute of Technology. I have experience
-            in software development, database design, web development,
-            systems analysis, and user-centered design. I am passionate
-            about developing innovative solutions that solve real-world problems.
-        </p>
-    </div>
+<div class="container">
+
+<h2 class="section-title">About Me</h2>
+
+<div class="about">
+
+<p>
+I am a final-year Information Technology student at Richfield Graduate Institute of Technology.
+I enjoy developing software solutions using Java, C#, PHP, SQL, HTML, CSS and modern software development practices.
+
+My goal is to become a professional software developer and contribute to innovative technology solutions that solve real-world problems.
+</p>
+
+</div>
+
+</div>
+
 </section>
 
 <section id="skills">
-    <div class="container">
 
-        <h2>Technical Skills</h2>
+<div class="container">
 
-        <div class="skills-grid">
-            <div class="skill">Java</div>
-            <div class="skill">C# .NET</div>
-            <div class="skill">C++</div>
-            <div class="skill">PHP</div>
-            <div class="skill">MySQL</div>
-            <div class="skill">SQL Server</div>
-            <div class="skill">HTML5</div>
-            <div class="skill">CSS3</div>
-            <div class="skill">JavaScript</div>
-            <div class="skill">Big Data</div>
-            <div class="skill">UI/UX Design</div>
-            <div class="skill">System Analysis</div>
-        </div>
+<h2 class="section-title">Technical Skills</h2>
 
-    </div>
+<div class="skills-grid">
+
+<div class="skill">Java</div>
+<div class="skill">C# .NET</div>
+<div class="skill">C++</div>
+<div class="skill">PHP</div>
+<div class="skill">MySQL</div>
+<div class="skill">SQL Server</div>
+<div class="skill">HTML5</div>
+<div class="skill">CSS3</div>
+<div class="skill">JavaScript</div>
+<div class="skill">Big Data</div>
+<div class="skill">UI/UX</div>
+<div class="skill">System Analysis</div>
+
+</div>
+
+</div>
+
 </section>
 
 <section id="projects">
 
-    <div class="container">
+<div class="container">
 
-        <h2>Projects</h2>
+<h2 class="section-title">My Projects</h2>
 
-        <div class="project-card">
-            <h3>Campus Event Management System</h3>
+<div class="projects-grid">
 
-            <p>
-                Developed a Java-based event management system that allows
-                students to register for campus events, manage event schedules,
-                and track attendance records.
-            </p>
+<div class="project-card">
+<h3>Campus Event Management System</h3>
+<p>
+Java-based system for managing university events and student registrations.
+</p>
+projects/campus-event.html
+View Project
+</a>
+</div>
 
-            <p><strong>Technologies:</strong> Java, MySQL</p>
-        </div>
+<div class="project-card">
+<h3>SkyFlow Terminal Manager</h3>
+<p>
+Airport terminal management system built using C# and .NET.
+</p>
+projects/skyflow.html
+View Project
+</a>
+</div>
 
-        <div class="project-card">
-            <h3>SkyFlow Terminal Manager</h3>
+<div class="project-card">
+<h3>Social Media Platform</h3>
+<p>
+Web-based social networking platform developed using PHP and MySQL.
+</p>
+projects/social-media.html
+View Project
+</a>
+</div>
 
-            <p>
-                Developed an airport terminal management system to manage
-                flight schedules, passenger information, and terminal operations.
-            </p>
+<div class="project-card">
+<h3>Hospital Big Data Analytics System</h3>
+<p>
+Healthcare analytics platform supporting data-driven decision-making.
+</p>
+projects/hospital-analytics.html
+View Project
+</a>
+</div>
 
-            <p><strong>Technologies:</strong> C#, .NET</p>
-        </div>
+<div class="project-card">
+<h3>Vehicle Anti-Hijack Tracking System</h3>
+<p>
+Vehicle security and tracking system with emergency alert functionality.
+</p>
+projects/anti-hijack.html
+View Project
+</a>
+</div>
 
-        <div class="project-card">
-            <h3>Social Media Platform</h3>
+</div>
 
-            <p>
-                Developed a social networking platform where users can create
-                profiles, share posts, comment, and interact with friends.
-            </p>
-
-            <p><strong>Technologies:</strong> PHP, MySQL, HTML, CSS</p>
-        </div>
-
-        <div class="project-card">
-            <h3>Hospital Big Data Analytics System</h3>
-
-            <p>
-                Designed a healthcare data analysis solution that supports
-                data-driven decision-making and hospital management.
-            </p>
-
-            <p><strong>Technologies:</strong> Big Data Concepts, SQL</p>
-        </div>
-
-        <div class="project-card">
-            <h3>Vehicle Anti-Hijack Tracking System</h3>
-
-            <p>
-                Designed a vehicle tracking and security system capable of
-                monitoring vehicle locations and sending emergency alerts.
-            </p>
-
-            <p><strong>Technologies:</strong> Systems Analysis & Design</p>
-        </div>
-
-    </div>
+</div>
 
 </section>
 
 <section id="education">
 
-    <div class="container">
+<div class="container">
 
-        <h2>Education</h2>
+<h2 class="section-title">Education</h2>
 
-        <div class="education-card">
+<div class="education-card">
 
-            <h3>Richfield Graduate Institute of Technology</h3>
+<h3>Richfield Graduate Institute of Technology</h3>
 
-            <p>Bachelor of Information Technology</p>
+<p>Bachelor of Information Technology</p>
 
-            <p>Final-Year Student</p>
+<p>Final-Year Student</p>
 
-        </div>
+</div>
 
-    </div>
+</div>
 
 </section>
 
 <section id="contact">
 
-    <div class="container">
+<div class="container">
 
-        <h2>Contact Me</h2>
+<h2>Contact Me</h2>
 
-        <p>Email: tindyllan@gmail.com/p>
+<p>Email: tindyllan@gmail.com</p>
 
-        <p>Phone: +27 76 509 0662 </p>
+<p>Phone: +27 76 509 0662</p>
 
-        <p>GitHub: github.com/STUDENTTAC</p>
+<p>GitHub: STUDENTTAC</p>
 
-        <p>LinkedIn: linkedin.com/in/tinashe-dylan-tavekwa </p>
+<p>LinkedIn: tinashe-dylan-tavekwa</p>
 
-    </div>
+</div>
 
 </section>
 
 <footer>
-    <p>© 2026 Tinashe Tavekwa | Professional Portfolio</p>
+
+<p>© 2026 Tinashe Tavekwa | Software Developer Portfolio</p>
+
 </footer>
 
 </body>
