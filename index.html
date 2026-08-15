@@ -1,338 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tinashe Tavekwa | Software Developer Portfolio</title>
-
-<style>
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Segoe UI',sans-serif;
-}
-
-body{
-    background:#f4f6f9;
-    color:#333;
-}
-
-nav{
-    background:#0a192f;
-    padding:15px;
-    position:sticky;
-    top:0;
-}
-
-nav ul{
-    list-style:none;
-    display:flex;
-    justify-content:center;
-}
-
-nav ul li{
-    margin:0 20px;
-}
-
-nav ul li a{
-    color:white;
-    text-decoration:none;
-    font-weight:bold;
-}
-
-nav ul li a:hover{
-    color:#00bcd4;
-}
-
-header{
-    background:#0a192f;
-    color:white;
-    text-align:center;
-    padding:100px 20px;
-}
-
-header h1{
-    font-size:3.5rem;
-}
-
-header p{
-    font-size:1.2rem;
-    margin-top:15px;
-}
-
-.container{
-    width:90%;
-    max-width:1200px;
-    margin:auto;
-}
-
-section{
-    padding:60px 0;
-}
-
-.section-title{
-    text-align:center;
-    margin-bottom:40px;
-    color:#0a192f;
-}
-
-.about{
-    text-align:center;
-    max-width:800px;
-    margin:auto;
-}
-
-.skills-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
-    gap:15px;
-}
-
-.skill{
-    background:white;
-    padding:15px;
-    text-align:center;
-    border-radius:10px;
-    box-shadow:0 2px 5px rgba(0,0,0,0.1);
-    font-weight:bold;
-}
-
-.projects-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-    gap:20px;
-}
-
-.project-card{
-    background:white;
-    padding:25px;
-    border-radius:10px;
-    box-shadow:0 2px 8px rgba(0,0,0,0.1);
-}
-
-.project-card h3{
-    color:#0a192f;
-    margin-bottom:15px;
-}
-
-.project-btn{
-    display:inline-block;
-    margin-top:15px;
-    background:#00bcd4;
-    color:white;
-    text-decoration:none;
-    padding:10px 20px;
-    border-radius:5px;
-}
-
-.project-btn:hover{
-    background:#008fa1;
-}
-
-.education-card{
-    background:white;
-    padding:25px;
-    text-align:center;
-    border-radius:10px;
-    box-shadow:0 2px 5px rgba(0,0,0,0.1);
-}
-
-#contact{
-    background:#0a192f;
-    color:white;
-    text-align:center;
-}
-
-#contact p{
-    margin:10px 0;
-}
-
-footer{
-    background:#05101d;
-    color:white;
-    text-align:center;
-    padding:20px;
-}
-
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio of Tinashe Dyllan Tavekwa, a final-year IT student and software developer in Cape Town, South Africa.">
+  <title>Tinashe Dyllan Tavekwa | Software Developer</title>
+  <style>
+    :root{--navy:#08182d;--navy2:#102846;--cyan:#21d4d8;--paper:#f5f7fa;--ink:#172235;--muted:#5d6878;--white:#fff}
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{background:var(--paper);color:var(--ink);font-family:Inter,"Segoe UI",Arial,sans-serif;line-height:1.65}
+    a{color:inherit}
+    nav{position:sticky;top:0;z-index:20;background:rgba(8,24,45,.96);border-bottom:1px solid rgba(255,255,255,.1)}
+    .nav-inner{width:min(1120px,90%);height:68px;margin:auto;display:flex;align-items:center;justify-content:space-between}
+    .brand{color:var(--white);font-weight:800;text-decoration:none;letter-spacing:.04em}
+    nav ul{display:flex;gap:24px;list-style:none}
+    nav li a{color:#dce8f5;text-decoration:none;font-size:.94rem}
+    nav li a:hover{color:var(--cyan)}
+    header{background:linear-gradient(135deg,var(--navy),var(--navy2));color:var(--white);padding:110px 5% 100px}
+    .hero{width:min(1120px,100%);margin:auto}
+    .eyebrow{color:var(--cyan);font-weight:800;text-transform:uppercase;letter-spacing:.16em;font-size:.8rem}
+    h1{max-width:850px;margin:14px 0;font-size:clamp(2.7rem,7vw,5.6rem);line-height:1.02;letter-spacing:-.055em}
+    .hero p{max-width:720px;color:#c9d8e8;font-size:clamp(1.05rem,2vw,1.3rem)}
+    .actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+    .btn{display:inline-block;padding:12px 19px;border-radius:8px;background:var(--cyan);color:var(--navy);font-weight:800;text-decoration:none}
+    .btn.secondary{background:transparent;color:white;border:1px solid #58718c}
+    main section{padding:78px 5%}
+    .container{width:min(1120px,100%);margin:auto}
+    .section-head{display:flex;align-items:end;justify-content:space-between;gap:30px;margin-bottom:34px}
+    .section-head h2{font-size:clamp(2rem,4vw,3.2rem);letter-spacing:-.035em}
+    .section-head p{max-width:590px;color:var(--muted)}
+    .about{display:grid;grid-template-columns:1.4fr .6fr;gap:24px}
+    .panel,.card{background:var(--white);border:1px solid #e1e7ee;border-radius:14px;padding:28px;box-shadow:0 12px 35px rgba(17,34,56,.06)}
+    .facts{display:grid;gap:18px}
+    .fact span{display:block;color:var(--muted);font-size:.78rem;text-transform:uppercase;letter-spacing:.11em}
+    .fact strong{display:block;margin-top:3px}
+    .skills{display:flex;flex-wrap:wrap;gap:10px}
+    .skill{background:#e7f8f8;color:#0b5058;border:1px solid #b9ebec;border-radius:999px;padding:8px 13px;font-weight:700;font-size:.92rem}
+    .projects{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+    .card{display:flex;flex-direction:column;min-height:245px}
+    .card small{color:#11858d;font-weight:800;text-transform:uppercase;letter-spacing:.1em}
+    .card h3{margin:8px 0 9px;font-size:1.35rem}
+    .card p{color:var(--muted)}
+    .card a{margin-top:auto;padding-top:20px;color:#087b84;font-weight:800;text-decoration:none}
+    .card a:hover{text-decoration:underline}
+    #contact{background:var(--navy);color:white}
+    #contact .section-head p{color:#b9c9db}
+    .contact-links{display:flex;flex-wrap:wrap;gap:12px}
+    .contact-links a{border:1px solid #49617c;border-radius:8px;padding:11px 15px;text-decoration:none}
+    .contact-links a:hover{border-color:var(--cyan);color:var(--cyan)}
+    footer{background:#040d18;color:#9aadc2;text-align:center;padding:24px}
+    @media(max-width:760px){nav ul{gap:13px}.brand{display:none}.nav-inner{justify-content:center}.about,.projects{grid-template-columns:1fr}.section-head{display:block}.section-head p{margin-top:8px}header{padding-top:85px}}
+  </style>
 </head>
 <body>
+  <nav aria-label="Main navigation">
+    <div class="nav-inner">
+      <a class="brand" href="#">TDT</a>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
 
-<nav>
-<ul>
-<li><a href="#about">About</a></lilsSkills</a></li>
-<li>#projectsProjects</a></li>
-<li>#contactContact</a></li>
-</ul>
-</nav>
+  <header>
+    <div class="hero">
+      <p class="eyebrow">Cape Town, South Africa · Open to internships</p>
+      <h1>Tinashe Dyllan Tavekwa</h1>
+      <p>Final-year Information Technology student and software developer building practical, user-focused systems across web, desktop and data.</p>
+      <div class="actions">
+        <a class="btn" href="#projects">View my work</a>
+        <a class="btn secondary" href="mailto:tindyllan@gmail.com">Contact me</a>
+      </div>
+    </div>
+  </header>
 
-<header>
+  <main>
+    <section id="about">
+      <div class="container">
+        <div class="section-head"><h2>About me</h2><p>I enjoy turning real problems into reliable software and continuously improving how I design, build and communicate technical solutions.</p></div>
+        <div class="about">
+          <div class="panel"><p>I am a final-year Information Technology student at Richfield Graduate Institute of Technology. My work spans Java, C# and .NET, PHP, SQL and front-end development. I am looking for an internship where I can contribute to a development team, learn from experienced engineers and ship useful software.</p></div>
+          <div class="panel facts">
+            <div class="fact"><span>Location</span><strong>Cape Town, South Africa</strong></div>
+            <div class="fact"><span>Focus</span><strong>Software Development</strong></div>
+            <div class="fact"><span>Status</span><strong>Open to internships</strong></div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<h1>Tinashe Tavekwa</h1>
+    <section id="skills">
+      <div class="container">
+        <div class="section-head"><h2>Technical skills</h2><p>A practical toolkit built through coursework and project development.</p></div>
+        <div class="skills">
+          <span class="skill">Java</span><span class="skill">C# .NET</span><span class="skill">C++</span><span class="skill">PHP</span><span class="skill">Python</span><span class="skill">JavaScript</span><span class="skill">HTML5</span><span class="skill">CSS3</span><span class="skill">MySQL</span><span class="skill">SQL Server</span><span class="skill">Big Data</span><span class="skill">UI/UX</span><span class="skill">Systems Analysis</span>
+        </div>
+      </div>
+    </section>
 
-<p>
-Final-Year Information Technology Student | Software Developer
-</p>
+    <section id="projects">
+      <div class="container">
+        <div class="section-head"><h2>Selected projects</h2><p>Academic and personal work demonstrating application development, database design and problem solving.</p></div>
+        <div class="projects">
+          <article class="card"><small>C# · .NET</small><h3>SkyFlow Terminal Manager</h3><p>Airport terminal management software designed to coordinate operational information and support efficient terminal workflows.</p><a href="projects/skyflow.html">View project →</a></article>
+          <article class="card"><small>Java</small><h3>Campus Event Management System</h3><p>A system for organizing university events and managing student registrations through a structured workflow.</p><a href="projects/campus-event.html">View project →</a></article>
+          <article class="card"><small>PHP · MySQL</small><h3>Social Media Platform</h3><p>A database-backed social networking application supporting accounts, content and user interaction.</p><a href="projects/social-media.html">View project →</a></article>
+          <article class="card"><small>Big Data</small><h3>Hospital Analytics System</h3><p>A healthcare analytics concept supporting data-informed operational and clinical decision-making.</p><a href="projects/hospital-analytics.html">View project →</a></article>
+          <article class="card"><small>Systems Analysis</small><h3>Vehicle Anti-Hijack System</h3><p>A vehicle security and tracking concept with emergency alert functionality for high-risk incidents.</p><a href="projects/anti-hijack.html">View project →</a></article>
+        </div>
+      </div>
+    </section>
 
-</header>
+    <section id="education">
+      <div class="container">
+        <div class="section-head"><h2>Education</h2><p>Building a broad foundation across software engineering, databases, systems and data.</p></div>
+        <div class="panel"><h3>Richfield Graduate Institute of Technology</h3><p>Bachelor of Information Technology · Final-year student</p></div>
+      </div>
+    </section>
 
-<section id="about">
+    <section id="contact">
+      <div class="container">
+        <div class="section-head"><h2>Let’s work together</h2><p>I am available for software development internships and early-career opportunities.</p></div>
+        <div class="contact-links">
+          <a href="mailto:tindyllan@gmail.com">tindyllan@gmail.com</a>
+          <a href="tel:+27765090662">+27 76 509 0662</a>
+          <a href="https://github.com/STUDENTTAC" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://www.linkedin.com/in/tinashe-dylan-tavekwa" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+      </div>
+    </section>
+  </main>
 
-<div class="container">
-
-<h2 class="section-title">About Me</h2>
-
-<div class="about">
-
-<p>
-I am a final-year Information Technology student at Richfield Graduate Institute of Technology.
-I enjoy developing software solutions using Java, C#, PHP, SQL, HTML, CSS and modern software development practices.
-
-My goal is to become a professional software developer and contribute to innovative technology solutions that solve real-world problems.
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-<section id="skills">
-
-<div class="container">
-
-<h2 class="section-title">Technical Skills</h2>
-
-<div class="skills-grid">
-
-<div class="skill">Java</div>
-<div class="skill">C# .NET</div>
-<div class="skill">C++</div>
-<div class="skill">PHP</div>
-<div class="skill">MySQL</div>
-<div class="skill">SQL Server</div>
-<div class="skill">HTML5</div>
-<div class="skill">CSS3</div>
-<div class="skill">JavaScript</div>
-<div class="skill">Big Data</div>
-<div class="skill">UI/UX</div>
-<div class="skill">System Analysis</div>
-
-</div>
-
-</div>
-
-</section>
-
-<section id="projects">
-
-<div class="container">
-
-<h2 class="section-title">My Projects</h2>
-
-<div class="projects-grid">
-
-<div class="project-card">
-<h3>Campus Event Management System</h3>
-<p>
-Java-based system for managing university events and student registrations.
-</p>
-projects/campus-event.html
-View Project
-</a>
-</div>
-
-<div class="project-card">
-<h3>SkyFlow Terminal Manager</h3>
-<p>
-Airport terminal management system built using C# and .NET.
-</p>
-projects/skyflow.html
-View Project
-</a>
-</div>
-
-<div class="project-card">
-<h3>Social Media Platform</h3>
-<p>
-Web-based social networking platform developed using PHP and MySQL.
-</p>
-projects/social-media.html
-View Project
-</a>
-</div>
-
-<div class="project-card">
-<h3>Hospital Big Data Analytics System</h3>
-<p>
-Healthcare analytics platform supporting data-driven decision-making.
-</p>
-projects/hospital-analytics.html
-View Project
-</a>
-</div>
-
-<div class="project-card">
-<h3>Vehicle Anti-Hijack Tracking System</h3>
-<p>
-Vehicle security and tracking system with emergency alert functionality.
-</p>
-projects/anti-hijack.html
-View Project
-</a>
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<section id="education">
-
-<div class="container">
-
-<h2 class="section-title">Education</h2>
-
-<div class="education-card">
-
-<h3>Richfield Graduate Institute of Technology</h3>
-
-<p>Bachelor of Information Technology</p>
-
-<p>Final-Year Student</p>
-
-</div>
-
-</div>
-
-</section>
-
-<section id="contact">
-
-<div class="container">
-
-<h2>Contact Me</h2>
-
-<p>Email: tindyllan@gmail.com</p>
-
-<p>Phone: +27 76 509 0662</p>
-
-<p>GitHub: STUDENTTAC</p>
-
-<p>LinkedIn: tinashe-dylan-tavekwa</p>
-
-</div>
-
-</section>
-
-<footer>
-
-<p>© 2026 Tinashe Tavekwa | Software Developer Portfolio</p>
-
-</footer>
-
+  <footer><p>© 2026 Tinashe Dyllan Tavekwa · Software Developer Portfolio</p></footer>
 </body>
 </html>
